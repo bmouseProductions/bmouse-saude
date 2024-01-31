@@ -6,8 +6,8 @@ import { Card, Input, Button, Typography } from "@material-tailwind/react";
 
 import { Textarea } from "@material-tailwind/react";
 import { Botao } from "../../components/Botao";
-import { useState } from "react";
-import { Email } from "../../API/api";
+import { ChangeEvent, FormEvent, useState } from "react";
+import { enviarEmail } from "../../API/api";
 
 export const Section8 = () => {
   const [formData, setFormData] = useState({
@@ -17,60 +17,24 @@ export const Section8 = () => {
     mensagem: "",
   });
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >,
-    fieldName: string
-  ) => {
-    const { value } = e.target;
+  const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [fieldName]: value,
+      [id]: value
     }));
   };
 
-  /* const handleChangeSelect = (value: string | undefined) => {
-    // Certifique-se de verificar se o valor não é undefined antes de atualizar o estado
-    if (value !== undefined) {
-      setFormData((prevData) => ({
-        ...prevData,
-        areaAtuacao: value,
-      }));
-    }
-  };
-   */
-
-  /*  const areaAtuacaoOptions = useState([
-    "Material Tailwind HTML",
-    "Material Tailwind React",
-    "Material Tailwind Vue",
-    "Material Tailwind Angular",
-    "Material Tailwind Svelte",
-  ])[0]; */
-
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      // Chame a função de envio de email passando o formData
-      await Email(formData);
-      // Limpe os dados do formulário após o envio bem-sucedido
-      setFormData({
-        nome: "",
-        email: "",
-        areaAtuacao: "",
-        mensagem: "",
-      });
+      await enviarEmail(formData);
     } catch (error) {
-      console.error("Erro ao enviar o email", error);
+      console.error("Something is wrong", error);
     }
 
-    console.log(Email(formData))
+    console.log(formData)
   };
-
-  // ...
-
-  // ...
 
   return (
     <section className="bg-white">
@@ -91,16 +55,20 @@ export const Section8 = () => {
             >
               <Typography variant="h1">Contato</Typography>
 
-              <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 mx-auto">
+              <form
+                className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 mx-auto"
+                onSubmit={handleSubmit}
+              >
                 <div className="mb-1 flex flex-col gap-6">
                   <Typography variant="h6" className="-mb-3">
                     Seu Nome
                   </Typography>
                   <Input
+                    id="nome"
                     size="lg"
                     placeholder="nome"
                     value={formData.nome}
-                    onChange={(e) => handleChange(e, "nome")}
+                    onChange={handleChange}
                     className=" !border-t-blue-gray-200 focus:!border-white"
                     labelProps={{
                       className: "before:content-none after:content-none",
@@ -111,10 +79,11 @@ export const Section8 = () => {
                     Seu Email
                   </Typography>
                   <Input
+                    id="email"
                     size="lg"
                     placeholder="email@mail.com"
                     value={formData.email}
-                    onChange={(e) => handleChange(e, "email")}
+                    onChange={handleChange}
                     className=" !border-t-blue-gray-200 focus:!border-white"
                     labelProps={{
                       className: "before:content-none after:content-none",
@@ -125,6 +94,7 @@ export const Section8 = () => {
                     Área de atuação
                   </Typography>
                   <Input
+                    id="areaAtuacao"
                     size="lg"
                     placeholder="Área de atuação"
                     className=" !border-t-blue-gray-200 focus:!border-white"
@@ -132,21 +102,22 @@ export const Section8 = () => {
                       className: "before:content-none after:content-none",
                     }}
                     value={formData.areaAtuacao}
-                    onChange={(e) => handleChange(e, "areaAtuacao")}
+                    onChange={handleChange}
                     crossOrigin={undefined}
                   />
                   <Typography variant="h6" className="-mb-3">
                     Mensagem
                   </Typography>
                   <Textarea
+                    id="mensagem"
                     label="Mensagem"
                     className="focus:border-white"
                     value={formData.mensagem}
-                    onChange={(e) => handleChange(e, "mensagem")}
+                    onChange={handleChange}
                   />
                 </div>
 
-                <Button className="mt-6 bg-[#0080FF] " onClick={handleSubmit}>
+                <Button className="mt-6 bg-[#0080FF] " type="submit">
                   Enviar
                 </Button>
               </form>
