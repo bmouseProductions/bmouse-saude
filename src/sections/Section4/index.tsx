@@ -91,7 +91,7 @@ export const Section4 = () => {
 
           <hr className="border-1 lg:hidden" />
           <div className=" w-full md:w-[50%] lg:w-[50%] xl:w-[40%] mx-auto flex items-center justify-center ">
-            <Botao style2={true} />
+            <Botao style2={false} />
           </div>
           <div className=" mx-auto arrow-container">
             <svg

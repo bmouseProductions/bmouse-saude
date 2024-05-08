@@ -16,7 +16,7 @@ const info = [
   {
     img: Medic,
     title: "Medic Imagema ",
-    url: "https://www.youtube.com/embed/De4xA3RCFpI?si=0MjG9ezOh5mCxbhY",
+    url: "https://www.youtube.com/embed/4zjg991hms8?si=4XT_pmeeGPzSQpJU",
     strong: "Diagnósticos",
     text: "A parceria entre a BMouse e a Medic Imagem Diagnósticos demonstra a importância do marketing na evolução de clínicas médicas. Para a clínica, que já é reconhecida por sua excelência e precisão em diagnósticos, buscamos aprimorar sua identidade visual para refletir sua alta tecnologia",
     text2: "",
@@ -68,6 +68,7 @@ export const Section5 = () => {
   const handleCloseModal = () => {
     setSelectedVideo(null);
   };
+
   return (
     <section className="bg-section-5">
       <div className="m-auto container  py-20 lg:py-32 px-5 lg:px-0 ">
@@ -177,7 +178,7 @@ export const Section5 = () => {
                           >
                             <path
                               d="M32.7155 5.74162L29.5824 2.24328C28.2847 0.796405 26.5444 0 24.6828 0C22.8211 0 21.0848 0.796406 19.7871 2.24536L16.2316 6.21071L12.7004 2.25579C11.6089 1.02991 10.1374 0.354421 8.56279 0.352336C6.98414 0.352336 5.51465 1.02365 4.42112 2.24328L1.28404 5.74162C-0.428013 7.65133 -0.428013 10.6431 1.28404 12.5528L13.6888 26.3919L15.3685 28.2641C15.789 28.7331 16.3812 29 17.0018 29C17.311 29 17.6142 28.9333 17.8932 28.8082C18.1701 28.6831 18.4228 28.4976 18.635 28.2641L32.7175 12.5528C34.4275 10.6431 34.4275 7.65133 32.7175 5.74162H32.7155ZM16.9997 22.7163L4.85974 9.16909C4.8557 9.15658 4.8557 9.13781 4.85974 9.12531L7.95841 5.66657L7.98267 5.64155C8.15246 5.45183 8.34449 5.35593 8.55672 5.35593C8.76896 5.35593 8.96099 5.45392 9.1328 5.64364L20.6907 18.4695C20.7109 18.4925 20.7291 18.5154 20.7452 18.5362L16.9997 22.7163ZM29.1418 9.16909L24.8101 14.0017L23.5266 12.6695L20.2925 9.05025L23.3487 5.64155C23.7226 5.22459 24.1835 5.00359 24.6828 5.00359C25.182 5.00359 25.6429 5.22459 26.0168 5.64155C26.0391 5.66449 26.0593 5.6895 26.0815 5.71035L29.1418 9.12739C29.1418 9.1399 29.1418 9.15658 29.1418 9.16909Z"
-                              fill="#022C5E"
+                              fill="#600aec"
                             />
                           </svg>
                         </div>
@@ -205,7 +206,7 @@ export const Section5 = () => {
           </div>
 
           <div className=" w-full md:w-[50%] lg:w-[50%] xl:w-[40%] mx-auto flex items-center justify-center ">
-            <Botao style2={false} />
+            <Botao style2={true} />
           </div>
           <div className=" mx-auto arrow-container  ">
             <svg

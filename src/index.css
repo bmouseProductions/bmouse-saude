@@ -43,11 +43,10 @@ body {
   background-position: center;
   background-size: cover;
   height: 100%; */
-  background: rgb(11, 111, 224);
   background: linear-gradient(
     0deg,
-    #04022a 0%,
-    #4601b5 35%,
+    #04022a 10%,
+    #4601b5 60%,
     #610aed 100%
   );
 }
@@ -56,9 +55,9 @@ body {
   background: rgb(11, 111, 224);
   background: linear-gradient(
     0deg,
-    rgba(11, 111, 224, 1) 0%,
-    rgba(8, 132, 174, 1) 35%,
-    rgba(3, 65, 113, 1) 100%
+    #610aed 0%,
+    #4601b5 30%,
+    #04022a 70%
   );
 }
 
