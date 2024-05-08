@@ -1,3 +1,5 @@
+import { Bubble } from "@typebot.io/react";
+
 import Logo from "../../assets/logo.svg";
 import Face from "../../assets/face.svg";
 import X from "../../assets/x.svg";
@@ -49,6 +51,28 @@ export const Footer = () => {
           </p>
         </div>
       </div>
+
+      <Bubble
+        typebot="bmouse"
+        previewMessage={{
+          message: "Olá, podemos lhe ajudar?",
+          autoShowDelay: 10000,
+          avatarUrl:
+            "https://s3.typebot.io/public/workspaces/clv2tewr6000hh80cwwlpcfjg/typebots/clv2thip6000112k79mwnke6i/hostAvatar?v=1713359359581",
+        }}
+        theme={{
+          button: {
+            backgroundColor: "#FFFFFF",
+            customIconSrc:
+              "https://s3.typebot.io/public/workspaces/clv2tewr6000hh80cwwlpcfjg/typebots/clv2thip6000112k79mwnke6i/bubble-icon?v=1713895393916",
+            size: "large",
+          },
+          previewMessage: {
+            closeButtonBackgroundColor: "#0042DA",
+            closeButtonIconColor: "#33ac45",
+          },
+        }}
+      />
     </footer>
   );
 };

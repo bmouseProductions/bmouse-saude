@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from "../../assets/section-5.svg";
 import Medic from "../../assets/teste.svg";
-// import Elisangela from "../../assets/menezes.svg";
-// import Luis from "../../assets/luis.svg";
-// import One from "../../assets/odontologia.svg";
-// /* import Modal from "../../components/Modal"; */
-// import Sorridents from "../../assets/sorridents.svg";
+import Elisangela from "../../assets/menezes.svg";
+import Luis from "../../assets/luis.svg";
+import One from "../../assets/odontologia.svg";
+/* import Modal from "../../components/Modal"; */
+import Sorridents from "../../assets/sorridents.svg";
 
 /* import { useState } from "react"; */
 import { Botao } from "../../components/Botao";
@@ -21,7 +21,6 @@ const info = [
     text: "A parceria entre a BMouse e a Medic Imagem Diagnósticos demonstra a importância do marketing na evolução de clínicas médicas. Para a clínica, que já é reconhecida por sua excelência e precisão em diagnósticos, buscamos aprimorar sua identidade visual para refletir sua alta tecnologia",
     text2: "",
   },
-  /*
   {
     img: Elisangela,
     title: "Dra. Elisângela ",
@@ -55,7 +54,6 @@ const info = [
     text2:
       " O primeiro grande marco foi a campanha 'Alegria', uma ação original e inovadora no contexto do marketing odontológico. ",
   },
-  */
 ];
 
 export const Section5 = () => {
@@ -185,17 +183,17 @@ export const Section5 = () => {
                       </div>
 
                       <div>
-                        <h1 className="text-3xl lg:text-2xl xl:text-3xl text-[#022C5E] ">
+                        <h1 className="text-3xl lg:text-2xl xl:text-3xl text-[#04022a] ">
                           {item.title}
                         </h1>
-                        <h1 className="!text-5xl lg:!text-4xl xl:!text-5xl text-[#022C5E] font-bold">
+                        <h1 className="!text-5xl lg:!text-4xl xl:!text-5xl text-[#04022a] font-bold">
                           {item.strong}
                         </h1>
                       </div>
-                      <p className="text-base lg:text-lg xl:text-2xl text-[#022C5E] font-light">
+                      <p className="text-base lg:text-lg xl:text-2xl text-[#04022a] font-light">
                         {item.text}
                       </p>
-                      <p className="text-base lg:text-lg xl:text-2xl text-[#022C5E] font-light">
+                      <p className="text-base lg:text-lg xl:text-2xl text-[#04022a] font-light">
                         {item.text2}
                       </p>
                     </div>

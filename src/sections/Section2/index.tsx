@@ -61,11 +61,11 @@ export const Section2 = () => {
                   className="flex gap-1 items-center  2xl:h-[80px]"
                   key={index}
                 >
-                  <div className="bg-[#00e1ff] h-[65px] w-[65px] flex items-center justify-center rounded-full">
+                  <div className="bg-[#fff] h-[65px] w-[65px] flex items-center justify-center rounded-full">
                     <div dangerouslySetInnerHTML={{ __html: item.icon }} />
                   </div>
-                  <div className="bg-[#00e1ff] h-[70px] 2xl:h-[60px] rounded-full px-4 flex items-center justify-center flex-1">
-                    <p className="font-light lg:text-lg xl:text-[15px] xl:leading-5 2xl:text-base text-center text-[#FFF]">
+                  <div className="bg-[#fff] h-[70px] 2xl:h-[60px] rounded-full px-4 flex items-center justify-center flex-1">
+                    <p className="font-light lg:text-lg xl:text-[15px] xl:leading-5 2xl:text-base text-center text-[#04022a]">
                       {item.text}
                     </p>
                   </div>

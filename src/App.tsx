@@ -37,7 +37,6 @@ function App() {
         <Footer />
         <div className="z-50">
           <BackTop />
-          <Chatbot />
         </div>
       </div>
     </>
