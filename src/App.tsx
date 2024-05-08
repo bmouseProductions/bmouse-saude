@@ -1,4 +1,3 @@
-import { Chatbot } from "./ChatbotPT";
 import  {BackTop}  from "./components/BtnUp";
 
 import { Footer } from "./components/Footer";
