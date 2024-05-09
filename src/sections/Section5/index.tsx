@@ -1,4 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { useState } from 'react';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import Image from "../../assets/section-5.webp";
 import Medic from "../../assets/teste.webp";
 import Elisangela from "../../assets/menezes.webp";
@@ -10,9 +17,18 @@ import Sorridents from "../../assets/sorridents.webp";
 /* import { useState } from "react"; */
 import { Botao } from "../../components/Botao";
 import Modal from "../../components/Modal";
-import { useState } from "react";
+
 
 const info = [
+  {
+    img: Sorridents,
+    title: "",
+    url: "https://player.vimeo.com/video/333220236?h=f331a2cab6&amp;background=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+    strong: "Sorridents",
+    text: "Com a Sorridents, a BMouse criou uma série de projetos inovadores, sempre buscando conversar com os pacientes de forma simples e clara, para que pudéssemos atingir um público amplo.",
+    text2:
+      " O primeiro grande marco foi a campanha 'Alegria', uma ação original e inovadora no contexto do marketing odontológico. ",
+  },
   {
     img: Medic,
     title: "Medic Imagema ",
@@ -45,15 +61,6 @@ const info = [
     text: "Quando estabelecemos uma parceria com a One Odontologia, nosso objetivo era transformar sua clínica odontológica em uma referência. Trabalhamos com a mesma abordagem que adotamos em outras parcerias, desenvolvendo conteúdos que refletissem o alto padrão e a excelência que a clínica oferece.",
     text2: "",
   },
-  {
-    img: Sorridents,
-    title: "",
-    url: "https://player.vimeo.com/video/333220236?h=f331a2cab6&amp;background=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-    strong: "Sorridents",
-    text: "Com a Sorridents, a BMouse criou uma série de projetos inovadores, sempre buscando conversar com os pacientes de forma simples e clara, para que pudéssemos atingir um público amplo.",
-    text2:
-      " O primeiro grande marco foi a campanha 'Alegria', uma ação original e inovadora no contexto do marketing odontológico. ",
-  },
 ];
 
 export const Section5 = () => {
@@ -75,132 +82,144 @@ export const Section5 = () => {
             <img src={Image} alt="Tom e Roberta" className="lg:w-[60%] " />
           </div>
           <div className="grid grid-cols-1 gap-10 text-white text-left  ">
-            {info.map((item, index) => {
-              return (
-                <div key={index}>
-                  <div className="flex flex-col lg:flex-row gap-5 bg-white shadow-2xl rounded-3xl h-full pb-10 lg:pb-0 lg:h-[470px] xl:h-[550px]">
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      className="w-full h-[250px] md:h-[400px] lg:h-full lg:w-[50%] xl:w-[50%] bg-transparent rounded-3xl flex items-center justify-center lg:p-10 border-none shadow-none hover:shadow-none "
-                      style={{
-                        backgroundImage: `url(${item.img})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "top center",
-                        backgroundRepeat: "no-repeat",
-                      }}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleOpenModal(item.url);
-                      }}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="72"
-                        height="72"
-                        viewBox="0 0 72 72"
-                        fill="none"
+            <Swiper
+              navigation={true} 
+              pagination={true}
+              slidesPerView={1}
+              spaceBetween={30}
+              modules={[Navigation, Pagination]}
+              className="mySwiper exemplos lg:px-10"
+            >
+              {info.map((item, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <div className="flex flex-col lg:flex-row gap-5 bg-white shadow-2xl rounded-3xl h-full pb-10 lg:pb-0 lg:h-[470px] xl:h-[550px]">
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        className="w-full h-[250px] md:h-[400px] lg:h-full lg:w-[50%] xl:w-[50%] bg-transparent rounded-3xl flex items-center justify-center lg:p-10 border-none shadow-none hover:shadow-none "
+                        style={{
+                          backgroundImage: `url(${item.img})`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "top center",
+                          backgroundRepeat: "no-repeat",
+                        }}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleOpenModal(item.url);
+                        }}
                       >
-                        <g filter="url(#filter0_d_230_418)">
-                          <path
-                            opacity="0.7"
-                            d="M36.0852 63.7998C53.5392 63.7998 67.6885 49.6506 67.6885 32.1965C67.6885 14.7425 53.5392 0.593262 36.0852 0.593262C18.6312 0.593262 4.48193 14.7425 4.48193 32.1965C4.48193 49.6506 18.6312 63.7998 36.0852 63.7998Z"
-                            fill="white"
-                          />
-                          <path
-                            d="M47.9039 32.3353L30.958 42.5681V22.1025L47.9039 32.3353Z"
-                            fill="#0B6FE0"
-                          />
-                        </g>
-                        <defs>
-                          <filter
-                            id="filter0_d_230_418"
-                            x="0.481934"
-                            y="0.593262"
-                            width="71.2066"
-                            height="71.2065"
-                            filterUnits="userSpaceOnUse"
-                            color-interpolation-filters="sRGB"
-                          >
-                            <feFlood
-                              flood-opacity="0"
-                              result="BackgroundImageFix"
-                            />
-                            <feColorMatrix
-                              in="SourceAlpha"
-                              type="matrix"
-                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                              result="hardAlpha"
-                            />
-                            <feOffset dy="4" />
-                            <feGaussianBlur stdDeviation="2" />
-                            <feComposite in2="hardAlpha" operator="out" />
-                            <feColorMatrix
-                              type="matrix"
-                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                            />
-                            <feBlend
-                              mode="normal"
-                              in2="BackgroundImageFix"
-                              result="effect1_dropShadow_230_418"
-                            />
-                            <feBlend
-                              mode="normal"
-                              in="SourceGraphic"
-                              in2="effect1_dropShadow_230_418"
-                              result="shape"
-                            />
-                          </filter>
-                        </defs>
-                      </svg>
-                    </a>
-
-                    <Modal
-                      isOpen={selectedVideo === item.url}
-                      onClose={handleCloseModal}
-                      link={item.url}
-                    />
-
-                    <div className="lg:py-8 px-5  lg:px-10 flex-1 flex flex-col items-start justify-center text-black gap-5 ">
-                      <div className="w-full flex items-center justify-between">
-                        <p className="uppercase rounded-full bg-[#00C2FF] text-white shadow-2xl px-4 py-2">
-                          Cliente
-                        </p>
-                        <div>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="34"
-                            height="29"
-                            viewBox="0 0 34 29"
-                            fill="none"
-                          >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="72"
+                          height="72"
+                          viewBox="0 0 72 72"
+                          fill="none"
+                        >
+                          <g filter="url(#filter0_d_230_418)">
                             <path
-                              d="M32.7155 5.74162L29.5824 2.24328C28.2847 0.796405 26.5444 0 24.6828 0C22.8211 0 21.0848 0.796406 19.7871 2.24536L16.2316 6.21071L12.7004 2.25579C11.6089 1.02991 10.1374 0.354421 8.56279 0.352336C6.98414 0.352336 5.51465 1.02365 4.42112 2.24328L1.28404 5.74162C-0.428013 7.65133 -0.428013 10.6431 1.28404 12.5528L13.6888 26.3919L15.3685 28.2641C15.789 28.7331 16.3812 29 17.0018 29C17.311 29 17.6142 28.9333 17.8932 28.8082C18.1701 28.6831 18.4228 28.4976 18.635 28.2641L32.7175 12.5528C34.4275 10.6431 34.4275 7.65133 32.7175 5.74162H32.7155ZM16.9997 22.7163L4.85974 9.16909C4.8557 9.15658 4.8557 9.13781 4.85974 9.12531L7.95841 5.66657L7.98267 5.64155C8.15246 5.45183 8.34449 5.35593 8.55672 5.35593C8.76896 5.35593 8.96099 5.45392 9.1328 5.64364L20.6907 18.4695C20.7109 18.4925 20.7291 18.5154 20.7452 18.5362L16.9997 22.7163ZM29.1418 9.16909L24.8101 14.0017L23.5266 12.6695L20.2925 9.05025L23.3487 5.64155C23.7226 5.22459 24.1835 5.00359 24.6828 5.00359C25.182 5.00359 25.6429 5.22459 26.0168 5.64155C26.0391 5.66449 26.0593 5.6895 26.0815 5.71035L29.1418 9.12739C29.1418 9.1399 29.1418 9.15658 29.1418 9.16909Z"
-                              fill="#600aec"
+                              opacity="0.7"
+                              d="M36.0852 63.7998C53.5392 63.7998 67.6885 49.6506 67.6885 32.1965C67.6885 14.7425 53.5392 0.593262 36.0852 0.593262C18.6312 0.593262 4.48193 14.7425 4.48193 32.1965C4.48193 49.6506 18.6312 63.7998 36.0852 63.7998Z"
+                              fill="white"
                             />
-                          </svg>
+                            <path
+                              d="M47.9039 32.3353L30.958 42.5681V22.1025L47.9039 32.3353Z"
+                              fill="#0B6FE0"
+                            />
+                          </g>
+                          <defs>
+                            <filter
+                              id="filter0_d_230_418"
+                              x="0.481934"
+                              y="0.593262"
+                              width="71.2066"
+                              height="71.2065"
+                              filterUnits="userSpaceOnUse"
+                              color-interpolation-filters="sRGB"
+                            >
+                              <feFlood
+                                flood-opacity="0"
+                                result="BackgroundImageFix"
+                              />
+                              <feColorMatrix
+                                in="SourceAlpha"
+                                type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                result="hardAlpha"
+                              />
+                              <feOffset dy="4" />
+                              <feGaussianBlur stdDeviation="2" />
+                              <feComposite in2="hardAlpha" operator="out" />
+                              <feColorMatrix
+                                type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                              />
+                              <feBlend
+                                mode="normal"
+                                in2="BackgroundImageFix"
+                                result="effect1_dropShadow_230_418"
+                              />
+                              <feBlend
+                                mode="normal"
+                                in="SourceGraphic"
+                                in2="effect1_dropShadow_230_418"
+                                result="shape"
+                              />
+                            </filter>
+                          </defs>
+                        </svg>
+                      </a>
+
+                      <Modal
+                        isOpen={selectedVideo === item.url}
+                        onClose={handleCloseModal}
+                        link={item.url}
+                      />
+
+                      <div className="lg:py-8 px-5  lg:px-10 lg:flex-1 flex flex-col items-start justify-center text-black gap-5 ">
+                        <div className="w-full flex items-center justify-between">
+                          <p className="uppercase rounded-full bg-[#00C2FF] text-white shadow-2xl px-4 py-2">
+                            Cliente
+                          </p>
+                          <div>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="34"
+                              height="29"
+                              viewBox="0 0 34 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M32.7155 5.74162L29.5824 2.24328C28.2847 0.796405 26.5444 0 24.6828 0C22.8211 0 21.0848 0.796406 19.7871 2.24536L16.2316 6.21071L12.7004 2.25579C11.6089 1.02991 10.1374 0.354421 8.56279 0.352336C6.98414 0.352336 5.51465 1.02365 4.42112 2.24328L1.28404 5.74162C-0.428013 7.65133 -0.428013 10.6431 1.28404 12.5528L13.6888 26.3919L15.3685 28.2641C15.789 28.7331 16.3812 29 17.0018 29C17.311 29 17.6142 28.9333 17.8932 28.8082C18.1701 28.6831 18.4228 28.4976 18.635 28.2641L32.7175 12.5528C34.4275 10.6431 34.4275 7.65133 32.7175 5.74162H32.7155ZM16.9997 22.7163L4.85974 9.16909C4.8557 9.15658 4.8557 9.13781 4.85974 9.12531L7.95841 5.66657L7.98267 5.64155C8.15246 5.45183 8.34449 5.35593 8.55672 5.35593C8.76896 5.35593 8.96099 5.45392 9.1328 5.64364L20.6907 18.4695C20.7109 18.4925 20.7291 18.5154 20.7452 18.5362L16.9997 22.7163ZM29.1418 9.16909L24.8101 14.0017L23.5266 12.6695L20.2925 9.05025L23.3487 5.64155C23.7226 5.22459 24.1835 5.00359 24.6828 5.00359C25.182 5.00359 25.6429 5.22459 26.0168 5.64155C26.0391 5.66449 26.0593 5.6895 26.0815 5.71035L29.1418 9.12739C29.1418 9.1399 29.1418 9.15658 29.1418 9.16909Z"
+                                fill="#600aec"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div className=''>
+                          <h1 className="text-3xl lg:text-2xl xl:text-3xl text-[#04022a] ">
+                            {item.title}
+                          </h1>
+                          <h1 className="!text-5xl lg:!text-4xl xl:!text-5xl text-[#04022a] font-bold">
+                            {item.strong}
+                          </h1>
+                        </div>
+                        <div>
+                          <p className="text-base lg:text-lg xl:text-2xl text-[#04022a] font-light text-start">
+                            {item.text}
+                          </p>
+                          <p className="text-base lg:text-lg xl:text-2xl text-[#04022a] font-light text-start">
+                            {item.text2}
+                          </p>
                         </div>
                       </div>
-
-                      <div>
-                        <h1 className="text-3xl lg:text-2xl xl:text-3xl text-[#04022a] ">
-                          {item.title}
-                        </h1>
-                        <h1 className="!text-5xl lg:!text-4xl xl:!text-5xl text-[#04022a] font-bold">
-                          {item.strong}
-                        </h1>
-                      </div>
-                      <p className="text-base lg:text-lg xl:text-2xl text-[#04022a] font-light">
-                        {item.text}
-                      </p>
-                      <p className="text-base lg:text-lg xl:text-2xl text-[#04022a] font-light">
-                        {item.text2}
-                      </p>
                     </div>
-                  </div>
-                </div>
-              );
-            })}
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+            
           </div>
 
           <div className=" w-full md:w-[50%] lg:w-[50%] xl:w-[40%] mx-auto flex items-center justify-center ">
