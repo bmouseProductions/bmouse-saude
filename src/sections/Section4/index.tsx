@@ -27,7 +27,7 @@ export const Section4 = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 text-white text-left lg:h-[150px] ">
-            <div className="lg:rounded-3xl flex items-center lg:bg-[#04022a] lg:shadow-2xl  gap-10 lg:gap-3 xl:gap-5 2xl:gap-10 h-full">
+            <div className="lg:rounded-3xl flex items-center lg:bg-[#04022a] lg:shadow-2xl gap-5 md:gap-10 lg:gap-3 xl:gap-5 2xl:gap-10 h-full">
               <img
                 src={One}
                 alt=""
@@ -38,7 +38,7 @@ export const Section4 = () => {
               </p>
             </div>
             <hr className="border-1 lg:hidden" />
-            <div className="lg:rounded-3xl flex items-center lg:bg-[#04022a] lg:shadow-2xl   gap-10 lg:gap-3 xl:gap-5 2xl:gap-10 h-full">
+            <div className="lg:rounded-3xl flex items-center lg:bg-[#04022a] lg:shadow-2xl gap-5 md:gap-10 lg:gap-3 xl:gap-5 2xl:gap-10 h-full">
               <img
                 src={Two}
                 alt=""
@@ -50,7 +50,7 @@ export const Section4 = () => {
               </p>
             </div>
             <hr className="border-1 lg:hidden" />
-            <div className="lg:rounded-3xl flex items-center lg:bg-[#04022a] lg:shadow-2xl   gap-10 lg:gap-3 xl:gap-5 2xl:gap-10 h-full">
+            <div className="lg:rounded-3xl flex items-center lg:bg-[#04022a] lg:shadow-2xl gap-5 md:gap-10 lg:gap-3 xl:gap-5 2xl:gap-10 h-full">
               <img
                 src={Three}
                 alt=""
@@ -64,7 +64,7 @@ export const Section4 = () => {
             <hr className="border-1 lg:hidden" />
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-white text-left lg:h-[200px] ">
-            <div className="rounded-3xl flex items-center lg:bg-[#04022a] lg:shadow-2xl   gap-10 lg:gap-5 xl:gap-10 h-full">
+            <div className="rounded-3xl flex items-center lg:bg-[#04022a] lg:shadow-2xl gap-5 md:gap-10 lg:gap-5 xl:gap-10 h-full">
               <img
                 src={Four}
                 alt=""

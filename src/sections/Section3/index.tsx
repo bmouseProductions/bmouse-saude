@@ -30,9 +30,9 @@ export const Section3 = () => {
               </div>
             </div>
 
-            <h1 className="text-7xl  text-white">
+            <h1 className="text-6xl  text-white">
               Somos <br />{" "}
-              <strong className="font-bold">Especialistas. </strong>
+              <strong className="font-bold">Especialistas</strong>
             </h1>
             <hr className="border-white " />
             <p className="lg:text-xl  xl:text-2xl text-left font-light 2xl:leading-7 text-[#F4F4F4] ">
@@ -66,7 +66,7 @@ export const Section3 = () => {
             </p>
             <h1 className="text-6xl text-white">
               Somos <br />{" "}
-              <strong className="font-bold">Especialistas. </strong>
+              <strong className="font-bold">Especialistas</strong>
             </h1>
             <div className="flex flex-col gap-5 bg">
               <img
