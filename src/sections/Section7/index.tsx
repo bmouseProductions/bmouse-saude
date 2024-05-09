@@ -1,7 +1,7 @@
-import Image from "../../assets/section-7.svg";
-import Cam1 from "../../assets/cam1.png";
-import Cam2 from "../../assets/cam2.png";
-import Cam3 from "../../assets/cam1.png";
+import Image from "../../assets/section-7.webp";
+import Cam1 from "../../assets/cam1.webp";
+import Cam2 from "../../assets/cam2.webp";
+import Cam3 from "../../assets/cam1.webp";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
@@ -79,7 +79,7 @@ export const Section7 = () => {
             </Swiper>
           </div>
           <div className=" w-full md:w-[50%] lg:w-[50%] xl:w-[40%] mx-auto flex items-center justify-center ">
-            <Botao style2={true} />
+            <Botao style2={false} />
           </div>
         </div>
       </div>

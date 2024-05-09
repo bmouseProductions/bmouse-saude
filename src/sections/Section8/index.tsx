@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import Image from "../../assets/section-8.svg";
+import Image from "../../assets/section-8.webp";
 
 import { Botao } from "../../components/Botao";
 

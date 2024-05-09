@@ -1,9 +1,9 @@
-import Image from "../../assets/section4.svg";
-import One from "../../assets/one.png";
-import Two from "../../assets/two.png";
-import Three from "../../assets/three.png";
-import Four from "../../assets/four.png";
-import Five from "../../assets/five.png";
+import Image from "../../assets/section4.webp";
+import One from "../../assets/one.webp";
+import Two from "../../assets/two.webp";
+import Three from "../../assets/three.webp";
+import Four from "../../assets/four.webp";
+import Five from "../../assets/five.webp";
 import { Botao } from "../../components/Botao";
 export const Section4 = () => {
   return (

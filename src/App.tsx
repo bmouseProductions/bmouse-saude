@@ -30,9 +30,7 @@ function App() {
         <Section5 />
         {/* <Section6></Section6> */}
         <Section7 />
-
         <Section8 />
-
         <Footer />
         <div className="z-50">
           <BackTop />

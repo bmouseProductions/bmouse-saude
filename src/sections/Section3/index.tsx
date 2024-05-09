@@ -1,4 +1,4 @@
-import Image from "../../assets/tom-beta.svg";
+import Image from "../../assets/tom-beta.webp";
 import { Botao } from "../../components/Botao";
 
 export const Section3 = () => {

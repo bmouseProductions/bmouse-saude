@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import Image from "../../assets/section-5.svg";
-import Medic from "../../assets/teste.svg";
-import Elisangela from "../../assets/menezes.svg";
-import Luis from "../../assets/luis.svg";
-import One from "../../assets/odontologia.svg";
+import Image from "../../assets/section-5.webp";
+import Medic from "../../assets/teste.webp";
+import Elisangela from "../../assets/menezes.webp";
+import Luis from "../../assets/luis.webp";
+import One from "../../assets/odontologia.webp";
 /* import Modal from "../../components/Modal"; */
-import Sorridents from "../../assets/sorridents.svg";
+import Sorridents from "../../assets/sorridents.webp";
 
 /* import { useState } from "react"; */
 import { Botao } from "../../components/Botao";

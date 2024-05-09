@@ -1,4 +1,4 @@
-import Saude from "../../assets/img.svg";
+import Saude from "../../assets/img.webp";
 
 import { Botao } from "../../components/Botao";
 export const Section1 = () => {

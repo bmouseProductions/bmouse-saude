@@ -1,4 +1,4 @@
-import Image from "../../assets/img-2.svg";
+import Image from "../../assets/img-2.webp";
 import { Botao } from "../../components/Botao";
 
 const info = [
