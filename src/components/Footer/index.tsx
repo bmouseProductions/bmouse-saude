@@ -63,7 +63,7 @@ export const Footer = () => {
             <div></div>
           </div>
           <p className="lg:text-xl  xl:text-2xl text-center mx-auto font-light 2xl:leading-7 text-[#F4F4F4] ">
-            BMouse Productions © 2023. Todos os direitos reservados.
+            BMouse Productions © 2024. Todos os direitos reservados.
           </p>
         </div>
       </div>
