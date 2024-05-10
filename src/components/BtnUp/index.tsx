@@ -9,7 +9,7 @@ export const BackTop = () => {
   return (
     <a
       onClick={handleButtonClickPlanos}
-      className="flex items-center justify-center  !shadow-md h-[50px] w-[50px] fixed bottom-3  left-3 text-white bg-[#fff] rounded-full cursor-pointer z-50"
+      className="flex items-center justify-center  !shadow-lg h-[45px] w-[45px] fixed bottom-20  left-6 text-white bg-[#fff] rounded-full cursor-pointer z-50"
     >
       <svg
         width="40"
