@@ -8,7 +8,7 @@ import { Botao } from "../../components/Botao";
 export const Section4 = () => {
   return (
     <section className="bg-section-3 my-0 ">
-      <div className="m-auto container py-20 px-5 lg:px-0 ">
+      <div className="m-auto container py-16 px-5 lg:px-0 ">
         <div className="grid grid-cols-1 items-center justify-center gap-10">
           <div className="flex flex-col items-center justify-center gap-5">
             <img
@@ -89,7 +89,6 @@ export const Section4 = () => {
             </div>
           </div>
 
-          <hr className="border-1 lg:hidden" />
           <div className=" w-full md:w-[50%] lg:w-[50%] xl:w-[40%] mx-auto flex items-center justify-center ">
             <Botao style2={false} />
           </div>

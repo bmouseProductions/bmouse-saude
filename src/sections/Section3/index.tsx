@@ -4,7 +4,7 @@ import { Botao } from "../../components/Botao";
 export const Section3 = () => {
   return (
     <section className="bg-gradient">
-      <div className="m-auto container  py-20  px-5 lg:px-0">
+      <div className="m-auto container  py-16  px-5 lg:px-0">
         <div className="hidden lg:grid lg:grid-cols-2 items-center gap-10">
           <div className="flex flex-col gap-5 bg">
             <img src={Image} alt="Tom e Roberta" className=" xl:w-full" />

@@ -12,7 +12,7 @@ export const Section6 = () => {
   return (
     <>
       <section className="bg-[#04022a] lg:rounded-none">
-        <div className="m-auto container  py-5 lg:py-20 px-5 lg:px-0 ">
+        <div className="m-auto container  py-5 lg:py-16 px-5 lg:px-0 ">
           <Swiper
             pagination={{
               dynamicBullets: true,

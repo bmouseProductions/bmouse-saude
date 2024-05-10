@@ -5,7 +5,7 @@ export const Section1 = () => {
   return (
     <section
       id="home"
-      className="flex flex-col lg:flex-row items-center justify-center h-[95vh] lg:py-20 px-5 lg:px-0 lg:min-h-[650px] xl:min-h-[700px] 2xl:min-h-[750px] 
+      className="flex flex-col lg:flex-row items-center justify-center h-[95vh] lg:py-16 px-5 lg:px-0 lg:min-h-[650px] xl:min-h-[700px] 2xl:min-h-[750px] 
         bg-gradient-to-b lg:bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#610aed] via-[#4601b5] via-35% md:via-10% to-[#04022a] md:to-70%
       "
     >

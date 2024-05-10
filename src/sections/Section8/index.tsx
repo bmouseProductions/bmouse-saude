@@ -7,7 +7,7 @@ import { Botao } from "../../components/Botao";
 export const Section8 = () => {
   return (
     <section className="bg-white">
-      <div className="m-auto container   py-20 px-5 lg:px-0 ">
+      <div className="m-auto container   py-16 px-5 lg:px-0 ">
       <img src={Image} className="" />
         <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-10">
           <p className="text-2xl ">
