@@ -110,9 +110,9 @@ export const Section3 = () => {
               <path
                 d="M18 39L36 57L54 39M18 18L36 36L54 18"
                 stroke="white"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>

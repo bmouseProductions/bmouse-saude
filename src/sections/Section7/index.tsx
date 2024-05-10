@@ -40,11 +40,12 @@ export const Section7 = () => {
             </p>
           </div>
           <div className="hidden lg:grid grid-cols-3 gap-32 text-white text-left h-[350px] ">
-            {info.map((item) => {
+            {info.map((item,index) => {
               return (
                 <div
                   data-aos="zoom-in"
                   className="rounded-3xl flex  bg-[#00C2FF] shadow-2xl gap-10 h-full"
+                  key={index}
                 >
                   <img
                     src={item.img}
@@ -63,9 +64,9 @@ export const Section7 = () => {
               modules={[Pagination]}
               className="mySwiper  "
             >
-              {info.map((item) => {
+              {info.map((item, index) => {
                 return (
-                  <SwiperSlide>
+                  <SwiperSlide key={index}>
                     <div className="rounded-3xl flex  bg-[#00C2FF] shadow-2xl gap-10 h-full">
                       <img
                         src={item.img}

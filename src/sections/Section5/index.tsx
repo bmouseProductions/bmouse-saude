@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,10 +14,15 @@ import Luis from "../../assets/luis.webp";
 import One from "../../assets/odontologia.webp";
 /* import Modal from "../../components/Modal"; */
 import Sorridents from "../../assets/sorridents.webp";
+import { Botao } from '../../components/Botao';
 
 /* import { useState } from "react"; */
-import { Botao } from "../../components/Botao";
-import Modal from "../../components/Modal";
+
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  link: string;
+}
 
 
 const info = [
@@ -65,13 +71,45 @@ const info = [
 
 export const Section5 = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [currentItem, setCurrentItem] = useState<any>(null);
 
-  const handleOpenModal = (videoUrl: string) => {
+  const handleOpenModal = (videoUrl: string, item: any) => {
     setSelectedVideo(videoUrl);
+    setCurrentItem(item);
   };
 
   const handleCloseModal = () => {
     setSelectedVideo(null);
+    setCurrentItem(null);
+  };
+
+  const ModalVideo: React.FC<ModalProps> = ({ isOpen, onClose, link }) => {
+    return (
+      <>
+        {isOpen && (
+          <div className="fixed inset-0 z-[10000] bg-black bg-opacity-75 flex items-center justify-center">
+            <div className="container mx-auto px-5 md:px-10 relative">
+              <div className="absolute top-0 right-0 m-5">
+                <button 
+                  className="w-10 h-10 botaoClose"
+                  onClick={onClose}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-full h-full">
+                    <path strokeLinecap="round" className="w-full h-full" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <iframe
+                className="mx-auto w-full md:max-w-[600px] md:h-[400px] lg:max-w-[700px] lg:h-[515px] xl:max-w-[1000px] h-[200px] rounded-3xl"
+                src={link}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              />
+            </div>
+          </div>
+        )}
+      </>
+    );
   };
 
   return (
@@ -106,7 +144,7 @@ export const Section5 = () => {
                         }}
                         onClick={(e) => {
                           e.preventDefault();
-                          handleOpenModal(item.url);
+                          handleOpenModal(item.url, item);
                         }}
                       >
                         <svg
@@ -135,10 +173,10 @@ export const Section5 = () => {
                               width="71.2066"
                               height="71.2065"
                               filterUnits="userSpaceOnUse"
-                              color-interpolation-filters="sRGB"
+                              colorInterpolationFilters="sRGB"
                             >
                               <feFlood
-                                flood-opacity="0"
+                                floodOpacity="0"
                                 result="BackgroundImageFix"
                               />
                               <feColorMatrix
@@ -169,12 +207,6 @@ export const Section5 = () => {
                           </defs>
                         </svg>
                       </a>
-
-                      <Modal
-                        isOpen={selectedVideo === item.url}
-                        onClose={handleCloseModal}
-                        link={item.url}
-                      />
 
                       <div className="lg:py-8 px-5  lg:px-10 lg:flex-1 flex flex-col items-start justify-center text-black gap-5 ">
                         <div className="w-full flex items-center justify-between">
@@ -219,7 +251,14 @@ export const Section5 = () => {
                 );
               })}
             </Swiper>
-            
+
+            {currentItem && (
+              <ModalVideo
+                isOpen={selectedVideo === currentItem.url}
+                onClose={handleCloseModal}
+                link={currentItem.url}
+              />
+            )}
           </div>
 
           <div className=" w-full md:w-[50%] lg:w-[50%] xl:w-[40%] mx-auto flex items-center justify-center ">
@@ -236,9 +275,9 @@ export const Section5 = () => {
               <path
                 d="M18 39L36 57L54 39M18 18L36 36L54 18"
                 stroke="white"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>
