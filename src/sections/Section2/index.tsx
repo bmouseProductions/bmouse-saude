@@ -38,7 +38,7 @@ const info = [
 
 export const Section2 = () => {
   return (
-    <section className="bg-[#04022a]   py-20 lg:py-32 px-5 lg:px-0">
+    <section className="bg-[#04022a]   py-20 px-5 lg:px-0">
       <div className="m-auto container ">
         <div className="grid lg:grid-cols-1 xl:grid-cols-3 items-center gap-10">
           <div className="flex flex-col  gap-5 ">

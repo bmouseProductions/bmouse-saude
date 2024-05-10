@@ -25,7 +25,7 @@ const info = [
 export const Section7 = () => {
   return (
     <section className="bg-section-3 -z-10">
-      <div className="m-auto container  py-20 lg:py-32 px-5 lg:px-0 ">
+      <div className="m-auto container  py-20 px-5 lg:px-0 ">
         <div className="grid grid-cols-1 items-center justify-center gap-10">
           <div className="flex flex-col items-center justify-center gap-5">
             <img src={Image} alt="Tom e Roberta" className="lg:w-[60%] " />
