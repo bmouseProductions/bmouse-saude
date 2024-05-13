@@ -229,8 +229,8 @@ export const Section5 = () => {
                           </div>
                         </div>
 
-                        <div className=''>
-                          <h1 className="text-3xl lg:text-2xl xl:text-3xl text-[#04022a] ">
+                        <div className=' '>
+                          <h1 className="text-3xl lg:text-2xl xl:text-3xl text-start text-[#04022a] ">
                             {item.title}
                           </h1>
                           <h1 className="!text-5xl lg:!text-4xl xl:!text-5xl text-[#04022a] font-bold">
